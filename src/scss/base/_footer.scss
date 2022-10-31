@@ -1,0 +1,65 @@
+@import '../variables/variables';
+
+footer {
+  background: #f5f5f5;
+
+  .row-1 {
+    border-bottom: 1px solid #c5c5c5;
+
+    .content {
+      max-width: $wrapper-mid;
+      margin: 0 auto;
+      padding: 30px 0;
+      display: flex;
+      justify-content: space-between;
+      @media screen and (max-width: $width-mob) {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .logo {
+        @media screen and (max-width: $width-mob) {
+          text-align: center;
+          margin-bottom: 15px;
+        }
+      }
+
+      .contact {
+        display: flex;
+        align-items: center;
+
+        a {
+          text-transform: uppercase;
+          color: grey;
+          padding: 0 20px;
+          text-decoration: none;
+          font-size: 16px;
+          @media screen and (max-width: $width-mob) {
+            font-size: 16px;
+            display: block;
+            padding: 0;
+            margin-bottom: 8px;
+          }
+
+        }
+
+        @media screen and (max-width: $width-mob) {
+          flex-direction: column;
+        }
+      }
+
+
+
+    }
+
+  }
+
+
+  .row-2 {
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+
+
+

@@ -1,0 +1,17 @@
+# IDEA/Webstorm project files
+.idea
+*.iml
+
+#VSCode metadata
+.vscode
+
+# Mac files
+.DS_Store
+
+#ftp config
+ftp.js
+
+#0_SRC
+node_modules
+dist
+backUp

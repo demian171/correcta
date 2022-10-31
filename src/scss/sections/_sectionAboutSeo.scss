@@ -1,0 +1,18 @@
+@import "../base/reset";
+@import '../fonts/fonts';
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+.section__About-seo {
+  padding: 60px;
+  font-size: 18px;
+  @media screen and (max-width: $width-mob) {
+    padding: 40px;
+  }
+
+  .wrapper {
+    max-width: $wrapper-mid;
+    margin: 0 auto;
+  }
+
+}
