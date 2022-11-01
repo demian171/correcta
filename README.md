@@ -1,4 +1,4 @@
-# Busines-Transformer by DGulp v1.3
+# Correcta by DGulp v1.3
 
 Commands:
 ```
