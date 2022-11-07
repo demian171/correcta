@@ -91,7 +91,7 @@ function buildScss() {
         .pipe(autoprefixer({
             cascade: false
         }))
-        .pipe(purgecss({content: ['src/**/*.html']}))  //убрать неиспользуемые стили
+        // .pipe(purgecss({content: ['src/**/*.html']}))  //убрать неиспользуемые стили
         .pipe(gulp.dest('./dist/css'))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(sourcemaps.write()) //добавить sourcemap

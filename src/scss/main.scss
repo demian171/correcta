@@ -4,6 +4,7 @@
 @import "sections/sections";
 @import "base/header";
 @import "base/footer";
+@import "base/burger";
 @import "svg/svg";
 
 
@@ -22,6 +23,7 @@ body {
   font-family: 'Geometria';
   margin: 0;
   min-width: 320px;
+  background: #ebf2ee;
   main {
 
 

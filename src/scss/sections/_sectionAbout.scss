@@ -1,0 +1,50 @@
+@import "../base/reset";
+@import '../fonts/fonts';
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+.section__about {
+
+  .wrapper {
+    margin: 0 $theme-board;
+    border-right: 1px solid #619897;
+    border-left: 1px solid #619897;
+
+    .header {
+      font-family: Akrobat;
+      text-transform: uppercase;
+      font-size: 56px;
+      padding: 120px 0 45px 45px;
+      font-weight: 300;
+      border-bottom: 1px solid #a1a1a1;
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 350px;
+
+      .arrows {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        div {
+          padding: 10px;
+          border: 1px solid grey;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+
+    }
+
+  }
+
+  @media screen and (max-width: $width-mob) {
+    padding: 40px;
+  }
+
+
+}
