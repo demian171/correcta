@@ -9,6 +9,8 @@
   background-color: #ccc;
   background-position: top center;
   background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 265px;
 
   @media screen and (max-width: $width-middle) {
 

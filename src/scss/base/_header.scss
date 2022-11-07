@@ -3,13 +3,15 @@
 header {
   justify-content: space-between;
   font-size: 16px;
-  height: 110px;
+  height: 85px;
   border-bottom: 1px solid #619897;
   text-transform: uppercase;
   position: absolute;
   width: 100%;
   display: grid;
-  grid-template-columns: 315px 1fr 110px 315px;
+  grid-template-columns: 265px 1fr 110px 265px;
+  font-family: Akrobat;
+  text-transform: uppercase;
 
   a {
     color: white;
@@ -23,7 +25,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 315px;
+    width: 265px;
     border-right: 1px solid #619897;
     padding-top: 10px;
     @media screen and (max-width: $width-middle) {
@@ -39,7 +41,7 @@ header {
     }
 
     img {
-      min-width: 190px;
+      width: 160px;
       height: auto;
       @media screen and (max-width: $width-mob) {
         min-width: 70px;
@@ -55,6 +57,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 60px;
 
     .nav-container {
       width: 100%;
@@ -75,17 +78,31 @@ header {
         li {
           float: left;
           list-style: none;
+          height: 100%;
+          display: flex;
+          align-content: center;
+          align-items: center;
+          padding: 0 15px;
+          border-bottom: 3px solid #fff0;
 
           a {
             font-size: 14px;
             text-decoration: none;
             text-transform: uppercase;
+            color: #e3e3e3;
+            font-weight: 300;
+          }
 
-            &:hover {
-              color: #808080;
-              text-decoration: none;
+          &.active,
+          &:hover {
+            border-bottom: 3px solid $theme-color-1;
+
+            a {
+              color: #ffffff;
+              font-weight: 400;
             }
           }
+
         }
       }
     }
@@ -96,6 +113,7 @@ header {
     border-left: 1px solid #619897;
     border-right: 1px solid #619897;
     cursor: pointer;
+
     .lines {
       width: 50px;
       border-radius: 15px;
@@ -104,6 +122,7 @@ header {
       top: 10px;
       position: absolute;
       transition: 0.5s all;
+
       &:before {
         content: " ";
         width: 50px;
@@ -114,6 +133,7 @@ header {
         top: -15px;
         transition: 0.5s all;
       }
+
       &:after {
         content: " ";
         width: 50px;
@@ -125,27 +145,34 @@ header {
         transition: 0.5s all;
       }
     }
+
     &:hover {
       .lines {
         background-color: #ff0000;
+
         &:before {
           background-color: #ff0000;
         }
+
         &:after {
           background-color: #ff0000;
         }
       }
     }
   }
+
   &.open {
     ul {
     }
+
     .hamburger {
       .lines {
         background-color: #ffffff;
+
         &:before {
           transform: rotateZ(-45deg) translateX(-10px) translateY(10px);
         }
+
         &:after {
           transform: rotateZ(45deg) translateX(-10px) translateY(-11px);
         }
@@ -157,7 +184,7 @@ header {
     display: flex;
     height: 100%;
     //background: $theme-color-1;
-    min-width: 315px;
+    width: 265px;
     align-items: center;
     justify-content: center;
     //border-left: 1px solid #619897;
