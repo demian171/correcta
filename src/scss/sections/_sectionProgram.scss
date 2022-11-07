@@ -1,0 +1,32 @@
+@import "../base/reset";
+@import '../fonts/fonts';
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+.section__program {
+
+  .wrapper {
+    margin: 0 $theme-board;
+    border-right: 1px solid #619897;
+    border-left: 1px solid #619897;
+    padding: 0 0 60px 45px;
+
+    .header {
+      font-family: Akrobat;
+      text-transform: uppercase;
+      font-size: 42px;
+      padding: 120px 0 45px 0px;
+      font-weight: 300;
+    }
+
+
+
+
+  }
+
+  @media screen and (max-width: $width-mob) {
+    padding: 40px;
+  }
+
+
+}
