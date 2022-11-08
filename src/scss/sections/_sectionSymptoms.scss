@@ -19,6 +19,88 @@
       font-weight: 300;
     }
 
+    .body {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+
+      .imgBlock {
+        background: #2ab3c8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .man_points {
+          max-width: 80%;
+        }
+      }
+
+      .accordion {
+        //width: 800px;
+        //margin: 90px auto;
+        color: black;
+        //background-color: white;
+        padding: 0px 0px;
+        .container {
+          position: relative;
+          margin: 0px 0px;
+          padding: 15px 35px;
+         background: white;
+          &.active {
+            .content {
+              //height: 150px;
+              height: auto;
+              transition: all 0.5s;
+              //min-height: fit-content;
+              //height: auto;
+              //margin-bottom: 20px;
+            }
+            .label {
+              &::before {
+                content: '-';
+                font-size: 30px;
+              }
+            }
+          }
+        }
+        .label {
+          position: relative;
+          padding: 10px 0;
+          font-size: 18px;
+          color: black;
+          cursor: pointer;
+          text-transform: uppercase;
+          font-family: Akrobat;
+          &::before {
+            content: '+';
+            color: black;
+            position: absolute;
+            top: 50%;
+            right: -5px;
+            font-size: 30px;
+            transform: translateY(-50%);
+          }
+        }
+        .content {
+          position: relative;
+          background: white;
+          font-family: Akrobat;
+          height: 0;
+          font-size: 20px;
+          text-align: justify;
+          //width: 780px;
+          overflow: hidden;
+          transition: 0.5s;
+          transition: all 0.5s;
+        }
+        hr {
+          width: 100;
+          margin-left: 0;
+          border: 1px solid grey;
+        }
+      }
+
+
+    }
+
 
 
 

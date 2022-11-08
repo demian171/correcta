@@ -12,6 +12,7 @@ header {
   grid-template-columns: $theme-board 1fr 110px $theme-board;
   font-family: Akrobat;
   text-transform: uppercase;
+  z-index: 2;
 
   a {
     color: white;
