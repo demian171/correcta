@@ -9,17 +9,79 @@
     margin: 0 $theme-board;
     border-right: 1px solid #619897;
     border-left: 1px solid #619897;
-    padding: 0 0 60px 45px;
+    padding: 0 0 60px 0;
 
     .header {
       font-family: Akrobat;
       text-transform: uppercase;
       font-size: 42px;
-      padding: 120px 0 45px 0px;
+      padding: 120px 0 45px $theme-padding;
       font-weight: 300;
     }
 
+    .topInfo {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
 
+      .topInfo__header {
+        background: $theme-color-1;
+        height: 90px;
+        color: white;
+        font-family: Akrobat;
+        text-transform: uppercase;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .mainInfo {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+
+      .mainInfo__wraper {
+        border-right: 1px solid #a1a1a1;
+      }
+
+      .mainInfo__price {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        border-top: 1px solid #a1a1a1;
+
+        .name {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 15px 0;
+          border-right: 1px solid #a1a1a1;
+          border-bottom: 1px solid #a1a1a1;
+
+          &.theader {
+            text-transform: uppercase;
+            font-family: Akrobat;
+            background: #dbe2de;
+            height: 90px;
+          }
+        }
+
+        .price {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          border-bottom: 1px solid #a1a1a1;
+          font-weight: 500;
+
+          &.theader {
+            text-transform: uppercase;
+            font-family: Akrobat;
+            background: #dbe2de;
+            height: 90px;
+          }
+        }
+      }
+    }
 
 
   }
