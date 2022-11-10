@@ -6,7 +6,7 @@ header {
   height: 85px;
   border-bottom: 1px solid #619897;
   text-transform: uppercase;
-  position: absolute;
+  //position: absolute;
   width: 100%;
   display: grid;
   grid-template-columns: $theme-board 1fr 110px $theme-board;
@@ -15,7 +15,7 @@ header {
   z-index: 2;
 
   a {
-    color: white;
+    //color: white;
   }
 
   @media screen and (max-width: $width-mob) {
@@ -90,7 +90,7 @@ header {
             font-size: 14px;
             text-decoration: none;
             text-transform: uppercase;
-            color: #e3e3e3;
+            color: #333333;
             font-weight: 300;
           }
 
@@ -99,7 +99,7 @@ header {
             border-bottom: 3px solid $theme-color-1;
 
             a {
-              color: #ffffff;
+              color: #333333;
               font-weight: 400;
             }
           }
@@ -230,11 +230,16 @@ header {
     width: 265px;
     align-items: center;
     justify-content: center;
+
     //border-left: 1px solid #619897;
     @media screen and (max-width: $width-mob) {
       display: block;
       width: 100%;
       background: none;
+    }
+
+    a {
+      color: #333333;
     }
   }
 

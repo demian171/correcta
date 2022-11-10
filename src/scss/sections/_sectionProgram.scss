@@ -9,14 +9,12 @@
     margin: 0 $theme-board;
     border-right: 1px solid #619897;
     border-left: 1px solid #619897;
-    padding: 0 0 60px 0;
+    padding: 0 0 0px 0;
+
 
     .header {
-      font-family: Akrobat;
-      text-transform: uppercase;
-      font-size: 42px;
-      padding: 120px 0 45px $theme-padding;
-      font-weight: 300;
+      @include sec-sub-header;
+      padding-left: $theme-padding;
     }
 
     .topInfo {
@@ -42,6 +40,7 @@
 
       .mainInfo__wraper {
         border-right: 1px solid #a1a1a1;
+        border-bottom: 1px solid #a1a1a1;
       }
 
       .mainInfo__price {

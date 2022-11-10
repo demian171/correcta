@@ -1,0 +1,49 @@
+@import "../base/reset";
+@import '../fonts/fonts';
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+.section__contactForm {
+
+  .wrapper {
+    margin: 0 $theme-board;
+    border-right: 1px solid #619897;
+    border-left: 1px solid #619897;
+    padding: 90px $theme-padding 90px $theme-padding;
+    border-bottom: 1px solid #a1a1a1;
+
+    .header {
+      @include sec-sub-header;
+      padding-top: 0;
+      padding-left: 0;
+
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      input {
+        height: 50px;
+        text-align: center;
+        border: 0;
+        border: 1px solid gray;
+
+        &:first-child {
+          border-right: 0px;
+        }
+
+        &.cf-form-submit {
+          background: $theme-color-1;
+          color: white;
+          border: 0px;
+        ;
+        }
+      }
+    }
+
+
+  }
+
+
+}
