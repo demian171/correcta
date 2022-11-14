@@ -10,6 +10,9 @@
     border-right: 1px solid #619897;
     border-left: 1px solid #619897;
     padding: 0 0 60px 0;
+    @media screen and (max-width: $width-mob) {
+      margin: 0 auto;
+    }
 
     .header {
       @include sec-sub-header;
@@ -123,9 +126,7 @@
 
   }
 
-  @media screen and (max-width: $width-mob) {
-    padding: 40px;
-  }
+
 
 
 }

@@ -11,6 +11,9 @@
     border-left: 1px solid #619897;
     padding: 90px $theme-padding 90px $theme-padding;
     border-bottom: 1px solid #a1a1a1;
+    @media screen and (max-width: $width-mob) {
+      margin: 0 auto;
+    }
 
     .header {
       @include sec-sub-header;

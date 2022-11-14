@@ -4,9 +4,6 @@
 @import '../mixins/mixins';
 
 .section__top-banner {
-  //height: 100vh;
-  //background-image: url('../img/index_back.jpg');
-  //background-color: #ccc;
   background-position: top center;
   background-size: cover;
   display: grid;
@@ -15,23 +12,26 @@
   position: relative;
   height: 100vh;
 
+  @media screen and (max-width: $width-mob) {
+    grid-template-columns: 1fr ;
+    height: 60vh;
+  }
+
 
   #video-bg {
-    //position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     overflow: hidden;
     z-index: 1;
-    //background: url("/img/index_back.jpg") no-repeat #94a233;
     background-size: cover;
     position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
-    //width: 100%;
     width: calc(100% - $theme-board);
+    @media screen and (max-width: $width-mob) {
+      width: 100%;
+    }
   }
 
   #video-bg > video {
@@ -64,6 +64,12 @@
     font-size: 18px;
     border-right: 1px solid #619897;
     z-index: 2;
+    @media screen and (max-width: $width-mob) {
+      padding: 0 0 0 0px;
+      display: flex;
+      align-items: center;
+    }
+
 
     .header {
       font-size: 58px;
@@ -71,6 +77,9 @@
       font-weight: 200;
       text-transform: uppercase;
       margin-bottom: 15px;
+      @media screen and (max-width: $width-mob) {
+        font-size: 36px;
+      }
     }
 
     .subHeader {
@@ -101,6 +110,9 @@
     justify-content: flex-end;
     border-right: 1px solid #619897;
     z-index: 2;
+    @media screen and (max-width: $width-mob) {
+      display: none;
+    }
 
     .logoHeader {
       margin: 65px 34px 65px 0;
@@ -112,6 +124,9 @@
 
   .section__top-banner--right {
     z-index: 2;
+    @media screen and (max-width: $width-mob) {
+     display: none;
+    }
   }
 
 

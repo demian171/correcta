@@ -4,11 +4,17 @@
 @import '../mixins/mixins';
 
 .section__cure {
+  @media screen and (max-width: $width-mob) {
+    padding: 0px;
+  }
 
   .wrapper {
     margin: 0 $theme-board;
     border-right: 1px solid #619897;
     border-left: 1px solid #619897;
+    @media screen and (max-width: $width-mob) {
+      margin: 0 auto;
+    }
 
     .header {
       @include sec-sub-header;
@@ -19,6 +25,9 @@
     .cure_table {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      @media screen and (max-width: $width-mob) {
+        grid-template-columns: 1fr 1fr;
+      }
 
       .cure_table--item {
         text-transform: uppercase;
@@ -39,6 +48,28 @@
           }
         }
 
+        @media screen and (max-width: $width-mob) {
+          font-size: 18px;
+          border-right: 0px ;
+          &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12) {
+            border-right: 0px solid #a1a1a1;
+          }
+
+          &:nth-child(odd) {
+            border-right: 1px solid #a1a1a1;
+            span {
+              border-right: 3px solid $theme-color-1;
+            }
+          }
+
+          span {
+            border-right: 0px;
+            padding: 0 10px;
+          }
+
+        }
+
+
         span {
           border-right: 3px solid $theme-color-1;
           width: 100%;
@@ -52,9 +83,6 @@
     }
   }
 
-  @media screen and (max-width: $width-mob) {
-    padding: 40px;
-  }
 
 
 }
