@@ -14,7 +14,7 @@ header {
   z-index: 2;
   @media screen and (max-width: $width-mob) {
     height: 80px;
-    grid-template-columns:  1fr  1fr 110px;
+    grid-template-columns:  1fr  1fr 85px;
   }
 
   a {
@@ -125,6 +125,7 @@ header {
     @media screen and (max-width: $width-mob) {
       //display: none;
       order: 3;
+      width: 85px;
     }
 
     /****************     burger-menu       ********************/
@@ -150,6 +151,22 @@ header {
           left: 0px;
           top: 10px;
           width: 20px;
+        }
+
+        @media screen and (max-width: $width-mob) {
+          right: 26px;
+          top: 40px;
+          width: 27px;
+          &:before {
+            left: 0px;
+            top: -10px;
+            width: 16px;
+          }
+          &:after {
+            left: 0px;
+            top: 10px;
+            width: 20px;
+          }
         }
       }
       &.close {

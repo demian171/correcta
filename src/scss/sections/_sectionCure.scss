@@ -20,6 +20,9 @@
       @include sec-sub-header;
       padding-left: $theme-padding;
       border-bottom: 1px solid #a1a1a1;
+      @media screen and (max-width: $width-mob) {
+        //padding-left: 15px;
+      }
     }
 
     .cure_table {

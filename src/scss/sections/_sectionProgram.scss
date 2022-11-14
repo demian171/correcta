@@ -23,6 +23,9 @@
     .topInfo {
       display: grid;
       grid-template-columns: 1fr 2fr;
+      @media screen and (max-width: $width-mob) {
+        grid-template-columns: 2fr 1fr;
+      }
 
       .topInfo__header {
         background: $theme-color-1;
@@ -40,6 +43,9 @@
     .mainInfo {
       display: grid;
       grid-template-columns: 1fr 2fr;
+      @media screen and (max-width: $width-mob) {
+        grid-template-columns: 0fr 1fr;
+      }
 
       .mainInfo__wraper {
         border-right: 1px solid #a1a1a1;

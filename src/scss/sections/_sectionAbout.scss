@@ -13,6 +13,7 @@
     border-bottom: 1px solid #a1a1a1;
     @media screen and (max-width: $width-mob) {
       margin: 0 auto;
+      padding: 0 15px 30px 15px;
     }
 
     .header {
@@ -32,6 +33,9 @@
     .info {
       display: grid;
       grid-template-columns: 1fr 350px;
+      @media screen and (max-width: $width-mob) {
+        grid-template-columns: 1fr 1fr;
+      }
 
       .arrows {
         display: flex;

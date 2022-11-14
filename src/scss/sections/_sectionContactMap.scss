@@ -19,6 +19,9 @@
     .address {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      @media screen and (max-width: $width-mob) {
+        grid-template-columns: 1fr 1fr;
+      }
 
 
       div {

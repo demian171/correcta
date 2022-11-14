@@ -23,6 +23,9 @@
     .body {
       display: grid;
       grid-template-columns: 2fr 1fr;
+      @media screen and (max-width: $width-mob) {
+        grid-template-columns: 1fr;
+      }
 
       .imgBlock {
         background: $theme-color-1;
@@ -35,11 +38,11 @@
       }
 
       .accordion {
-        //width: 800px;
-        //margin: 90px auto;
         color: black;
-        //background-color: white;
-        padding: 0px 0px 0 $theme-padding;
+        padding: 0 0 0 $theme-padding;
+        @media screen and (max-width: $width-mob) {
+          padding: 0;
+        }
         .container {
           position: relative;
           margin: 0px 0px;
@@ -48,11 +51,6 @@
           &.active {
             .content {
               height: 150px;
-              //height: auto;
-              //transition: all 0.5s;
-              //min-height: fit-content;
-              //height: auto;
-              //margin-bottom: 20px;
             }
             .label {
               &::before {
@@ -95,19 +93,14 @@
           }
 
           .link {
-            background: $theme-color-2;
-            padding: 10px 15px;
-            color: #e8e8e8;
-            width: 280px;
-            height: 45px;
-            border-radius: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            color: #141414;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 22px;
 
             &:hover {
-              background: #e8e8e8;
-              color: #057382;
+              //background: #e8e8e8;
+              //color: #057382;
             }
           }
         }

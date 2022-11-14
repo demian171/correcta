@@ -8,6 +8,9 @@ footer {
     border-left: 1px solid #619897;
     padding: 0;
     border-bottom: 1px solid #a1a1a1;
+    @media screen and (max-width: $width-mob) {
+      margin: 0 auto;
+    }
 
     .content {
       max-width: $wrapper-mid;
@@ -44,6 +47,9 @@ footer {
         .col {
           display: flex;
           flex-direction: column;
+          padding: 0;
+          width: 100%;
+          padding: 0 15px;
         }
 
         a {

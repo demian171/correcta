@@ -13,6 +13,7 @@
     border-bottom: 1px solid #a1a1a1;
     @media screen and (max-width: $width-mob) {
       margin: 0 auto;
+      padding: 40px;
     }
 
     .header {
@@ -25,11 +26,14 @@
     .contact-form {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      @media screen and (max-width: $width-mob) {
+        grid-template-columns: 1fr;
+      }
 
       input {
         height: 50px;
         text-align: center;
-        border: 0;
+        //border: 0;
         border: 1px solid gray;
 
         &:first-child {
@@ -40,8 +44,14 @@
           background: $theme-color-1;
           color: white;
           border: 0px;
-        ;
         }
+        @media screen and (max-width: $width-mob) {
+          margin-bottom: 8px;
+          &:first-child {
+            border: 1px solid gray;
+          }
+        }
+
       }
     }
 
