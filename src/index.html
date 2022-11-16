@@ -5,7 +5,7 @@
 
 @@include('html/header.html',{})
 
-<main  class="">
+<main class="">
 
     <section class="section__top-banner">
 
@@ -56,25 +56,51 @@
     <section class="section__about">
         <div class="wrapper">
             <div class="header">Про клініку</div>
-            <div class="slides">
-                <img class="slide" src="img/slider/1.jpg" alt="" width="" height="">
-                <img class="slide" src="img/slider/2.jpg" alt="" width="" height="">
-            </div>
-            <div class="info">
-                <div class="desc">
-                    Національна мережа Центрів фізичної терапії та масажу «Correcta» допоможе Вам позбавитися болю у
-                    спині, шиї, суглобах, відновити правильну поставу. Ви відчуєте позитивну динаміку з перших занять,
-                    отримаєте результат на тривалий термін.
-                </div>
-                <div class="arrows">
-                    <div class="left">
-                        <img class="slide" src="img/left.png" alt="" width="50" height="">
+
+            <!--  SLIDER-->
+            <div id="slider" class="slider">
+
+                <div class="slider__wrap swiper-wrapper">
+                    <div class="item swiper-slide">
+                        <img class="slide" src="img/slider/1.jpg" alt="" width="" height="">
                     </div>
-                    <div class="right">
-                        <img class="slide" src="img/right.png" alt="" width="50" height="">
+                    <div class="item swiper-slide">
+                        <img class="slide" src="img/slider/2.jpg" alt="" width="" height="">
+                    </div>
+
+                    <div class="item swiper-slide">
+                        <img class="slide" src="img/slider/1.jpg" alt="" width="" height="">
+                    </div>
+                    <div class="item swiper-slide">
+                        <img class="slide" src="img/slider/2.jpg" alt="" width="" height="">
                     </div>
                 </div>
+
+                <div class="info">
+                    <div class="desc">
+                        Національна мережа Центрів фізичної терапії та масажу «Correcta» допоможе Вам позбавитися болю у
+                        спині, шиї, суглобах, відновити правильну поставу. Ви відчуєте позитивну динаміку з перших занять,
+                        отримаєте результат на тривалий термін.
+                    </div>
+                    <div class="slider__controls arrows">
+                        <div class="slider__pagination"></div>
+                        <div class="slider__button-next">
+                            <svg class="svg-icon__arrow--right" viewBox="0 0 7 12" height="100%" width="100%"  xmlns="http://www.w3.org/2000/svg">
+                                <path  fill-rule="evenodd" d="M6.893 5.967c0-.268-.107-.524-.295-.713L1.724.37C1.33-.024.692-.024.3.37c-.394.394-.394 1.033 0 1.427l4.162 4.17L.3 10.137c-.394.394-.394 1.033 0 1.427.392.394 1.03.394 1.424 0L6.598 6.68c.188-.19.295-.445.295-.713z"/>
+                            </svg>
+                        </div>
+                        <div class="slider__button-prev">
+                            <svg class="svg-icon__arrow--left" viewBox="0 0 7 12" height="100%" width="100%"  xmlns="http://www.w3.org/2000/svg">
+                                <path  fill-rule="evenodd" d="M.107 6.033c0 .268.107.524.295.713l4.874 4.884c.394.394 1.032.394 1.424 0 .394-.394.394-1.033 0-1.427l-4.162-4.17L6.7 1.863c.394-.394.394-1.033 0-1.427-.392-.394-1.03-.394-1.424 0L.402 5.32c-.188.19-.295.445-.295.713z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
+            <!-- END SLIDER-->
 
         </div>
     </section>
@@ -302,6 +328,9 @@
 
 @@include('html/footer.html',{})
 
+
+<script src='./libs/js/jquery.min.js'></script>
+<script src='./libs/js/swiper.min.js'></script>
 
 <script src="./js/main.min.js"></script>
 </body>

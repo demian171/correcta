@@ -102,6 +102,13 @@ function buildScss() {
         .pipe(browserSync.stream());
 };
 
+function libs () {
+    return gulp.src("./src/libs/**")
+        .pipe(gulp.dest("./dist/libs/"))
+        .pipe(browserSync.stream());
+}
+
+
 const minifyJs = () =>
     gulp.src('./src/js/*.js')
         .pipe(sourcemaps.init())
@@ -132,9 +139,10 @@ gulp.task("moveHtml", moveHtml);
 //gulp.task("buildStyles", buildStyles);
 gulp.task("buildScss", buildScss);
 gulp.task("minifyJs", minifyJs);
+gulp.task("libs", libs);
 
-gulp.task("moveFiles", gulp.parallel("buildScss", "moveIMG", "minifyJs", "moveHtml", "moveFonts"));
-gulp.task("moveCssJs", gulp.parallel("buildScss", "minifyJs", "moveFonts"));
+gulp.task("moveFiles", gulp.parallel("buildScss", "libs", "moveIMG", "minifyJs", "moveHtml", "moveFonts"));
+gulp.task("moveCssJs", gulp.parallel("buildScss", "libs", "minifyJs", "moveFonts"));
 
 gulp.task('mzip', function () {
     let curDate = new Date();
@@ -168,11 +176,13 @@ const watchAll = () => {
     gulp.watch('./src/scss/**/*.scss', buildScss).on('change', browserSync.reload);
     gulp.watch('./src/**/*.html', moveHtml).on('change', browserSync.reload);
     gulp.watch('./src/js/*.js', minifyJs).on('change', browserSync.reload);
+    gulp.watch('./src/libs/**', minifyJs).on('change', browserSync.reload);
 }
 
 const devWatch = () => {
     gulp.watch('./src/scss/**/*.scss', buildScss).on('change', browserSync.reload);
     gulp.watch('./src/js/*.js', minifyJs).on('change', browserSync.reload);
+    gulp.watch('./src/libs/**', minifyJs).on('change', browserSync.reload);
 }
 
 gulp.task("build", gulp.series(delDist, 'moveFiles'));
