@@ -3,89 +3,61 @@
 @import '../variables/variables';
 @import '../mixins/mixins';
 
-.section__cure {
+
+.service-page {
+
   @media screen and (max-width: $width-mob) {
     padding: 0px;
   }
 
-  .wrapper {
-    margin: 0 $theme-board;
-    border-right: 1px solid #619897;
-    border-left: 1px solid #619897;
-    @media screen and (max-width: $width-mob) {
-      margin: 0 auto;
-    }
+  .banner {
+    display: grid;
+    grid-template-columns: 2fr 1fr $theme-board;
+    border-bottom: 1px solid #619897;
 
-    .header {
-      @include sec-sub-header;
-      padding-left: $theme-padding;
-      border-bottom: 1px solid #a1a1a1;
-      @media screen and (max-width: $width-mob) {
-        //padding-left: 15px;
+    .banner__img {
+      grid-column: 1;
+      grid-row: 1;
+      position: relative;
+      overflow: hidden;
+      height: 500px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
 
-    .cure_table {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      @media screen and (max-width: $width-mob) {
-        grid-template-columns: 1fr 1fr;
-      }
+    .banner__header {
+      grid-column: 1;
+      grid-row: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      text-transform: uppercase;
+      font-family: Akrobat;
+      padding: 60px;
+      letter-spacing: 2px;
+      font-weight: 300;
+    }
 
-      .cure_table--item {
-        text-transform: uppercase;
-        font-family: Akrobat;
-        font-size: 22px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 250px;
-        text-align: center;
-        border-right: 1px solid #a1a1a1;
-        border-bottom: 1px solid #a1a1a1;
+    .banner__vertical {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 0;
+      border-left: 1px solid #619897;
+      border-right: 1px solid #619897;
 
-        &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12) {
-          border-right: 0px ;
-          span {
-            border-right: 0px ;
-          }
-        }
-
-        @media screen and (max-width: $width-mob) {
-          font-size: 18px;
-          border-right: 0px ;
-          &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12) {
-            border-right: 0px solid #a1a1a1;
-          }
-
-          &:nth-child(odd) {
-            border-right: 1px solid #a1a1a1;
-            span {
-              border-right: 3px solid $theme-color-1;
-            }
-          }
-
-          span {
-            border-right: 0px;
-            padding: 0 10px;
-          }
-
-        }
-
-
-        span {
-          border-right: 3px solid $theme-color-1;
-          width: 100%;
-          height: 60px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 0 40px;
-        }
+      img {
+        max-height: 100%;
       }
     }
   }
 
-
-
 }
+
